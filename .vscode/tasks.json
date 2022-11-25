@@ -1,0 +1,20 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "command": "/home/yann/Development/project5_OCMovies/OCMovies-API-EN-FR/env/bin/python",
+            "args": [
+                "manage.py",
+                "runserver"
+            ],
+            "isBackground": true,
+            "options": {
+                "cwd": "/home/yann/Development/project5_OCMovies/OCMovies-API-EN-FR"
+            },
+            "label": "Run server"
+        }
+    ]
+}
