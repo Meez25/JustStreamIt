@@ -1,3 +1,4 @@
+import "./index.scss";
 import retrieveContent from './query.js';
 
 async function showContent() {
@@ -13,4 +14,4 @@ async function showContent() {
     }
 }
 
-showContent();
+// showContent();
