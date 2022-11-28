@@ -1,4 +1,5 @@
 import "./index.scss";
+import carousel from './carousel.js';
 import retrieveContent from './query.js';
 
 async function showContent() {
@@ -15,3 +16,16 @@ async function showContent() {
 }
 
 // showContent();
+
+function test() {
+    let toto = document.getElementsByClassName('left-best-movie')
+    console.log(toto[0].innerHTML)
+    toto[0].addEventListener('mousemove', function (event) {
+        const x = event.offsetX;
+        const y = event.offsetY;
+        console.log(x)
+        console.log(y)
+    })
+}
+// test();
+carousel();
