@@ -1,5 +1,5 @@
-export default function carousel2() {
-    const slidesContainer = document.getElementById("slides-container");
+export default function carousel() {
+    const slidesContainer = document.getElementById("slides-container-best-movie-list");
     const slide = document.querySelector(".slide");
     const prevButton = document.getElementById("slide-arrow-prev-best-movie-list");
     const nextButton = document.getElementById("slide-arrow-next-best-movie-list");
