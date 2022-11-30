@@ -1,5 +1,5 @@
 import "./index.scss";
-import carousel from './carousel.js';
+import carousel2 from './carousel.js';
 import retrieveContent from './query.js';
 
 async function showContent() {
@@ -28,4 +28,5 @@ function test() {
     })
 }
 // test();
-carousel();
+// carousel();
+carousel2();

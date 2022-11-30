@@ -1,37 +1,17 @@
-function carousel() {
-    const carouselContainer = document.querySelector(".category-1 > .carousel");
-    const slides = document.querySelectorAll('.category-1 > .carousel > .movie-container');
-    const next = document.querySelector('.category-1 > .carousel > .right');
-    const prev = document.querySelector('.category-1 > .carousel > .left');
-    let counter = 1;
-    const size = slides[0].clientWidth;
-    carouselContainer.style.transform = 'translateX(' + (-size * counter) + 'px';
-    next.addEventListener('click', () => {
-        if (counter >= slides.length) return;
-        carouselContainer.style.transition = 'transform 0.4s ease-in-out';
-        counter++;
-        carouselContainer.style.transform = 'translateX(' + (-size * counter) + 'px';
+export default function carousel2() {
+    const slidesContainer = document.getElementById("slides-container");
+    const slide = document.querySelector(".slide");
+    const prevButton = document.getElementById("slide-arrow-prev-best-movie-list");
+    const nextButton = document.getElementById("slide-arrow-next-best-movie-list");
+
+    nextButton.addEventListener("click", () => {
+        const slideWidth = slide.clientWidth;
+        slidesContainer.scrollLeft += slideWidth;
     });
-    prev.addEventListener('click', () => {
-        if (counter <= 0) return;
-        carouselContainer.style.transition = 'transform 0.4s ease-in-out';
-        counter--;
-        carouselContainer.style.transform = 'translateX(' + (-size * counter) + 'px';
+
+    prevButton.addEventListener("click", () => {
+        const slideWidth = slide.clientWidth;
+        slidesContainer.scrollLeft -= slideWidth;
     });
-    carouselContainer.addEventListener('transitionend', () => {
-        console.log(slides[counter]);
-        if (slides[counter].id === 'lastslide') {
-            carouselContainer.style.transition = 'none';
-            counter = slides.length - 2;
-            carouselContainer.style.transform = 'translateX(' + (-size * counter) + 'px';
-        }
-    });
-    carouselContainer.addEventListener('transitionend', () => {
-        console.log(slides[counter]);
-        if (slides[counter].id === 'firstslide') {
-            carouselContainer.style.transition = 'none';
-            counter = slides.length - counter;
-            carouselContainer.style.transform = 'translateX(' + (-size * counter) + 'px';
-        }
-    });
+
 }
