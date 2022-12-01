@@ -5,6 +5,7 @@ export default function createFilmList(result, ul_to_append) {
         let li = document.createElement("li");
         li.classList.add("slide");
         let img = document.createElement("img");
+        img.setAttribute("data-modal", "modal-one");
         img.src = result[i].image_url;
         li.appendChild(img);
         ul_to_append.appendChild(li);
