@@ -16,7 +16,9 @@ carousel("category-2");
 carousel("category-3");
 
 Promise.all([finishedDisplayingBestReview, two, three, four]).then((values) => {
+    const body = document.getElementsByClassName("body")[0];
+    const loading = document.getElementsByClassName("middle")[0];
+    loading.style.display = "none";
+    body.style.display = "inline";
     createModal();
 });
-
-//createModal();

@@ -1,5 +1,4 @@
 export default function createModal() {
-    console.log("creating modal...");
     const modals = document.querySelectorAll('[data-modal]');
     modals.forEach(function (trigger) {
         trigger.addEventListener('click', function (event) {

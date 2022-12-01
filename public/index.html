@@ -6,81 +6,93 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JustStreamIt!</title>
+    <script src="/polyfill.bundle.js"></script>
 </head>
 
 <body>
-    <header>
-        <h1>JustStreamIt</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Catégories</a></li>
-            </ul>
-        </nav>
-        <div>
-        </div>
-    </header>
-    <main class="best-movie">
-        <div class="left-best-movie">
+    <div class="body">
+        <header>
+            <h1>JustStreamIt</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Catégories</a></li>
+                </ul>
+            </nav>
+            <div>
+            </div>
+        </header>
+        <main class="best-movie">
+            <div class="left-best-movie">
 
-            <h1></h1>
-            <a href="#">Play</a>
-            <p></p>
-        </div>
-        <div class="img-container">
-            <img data-modal="modal-one" alt="">
-        </div>
-    </main>
-    <section class="best-movie-list">
-        <h1>Films les mieux notés</h1>
-        <div class="carousel-best-movie-list">
-            <button class="slide-arrow slide-arrow-left" id="slide-arrow-prev-best-movie-list">&#8249;</button>
-            <button class="slide-arrow slide-arrow-right" id="slide-arrow-next-best-movie-list">&#8250;</button>
-            <ul class="slides-container" id="slides-container-best-movie-list">
-            </ul>
-        </div>
-    </section>
-    <section class="category-1">
-        <h1>Science-fiction</h1>
-        <div class="carousel-best-movie-list">
-            <button class="slide-arrow slide-arrow-left" id="slide-arrow-prev-cat1-movie-list">&#8249;</button>
-            <button class="slide-arrow slide-arrow-right" id="slide-arrow-next-cat1-movie-list">&#8250;</button>
-            <ul class="slides-container" id="slides-container-cat1-movie-list">
-            </ul>
-        </div>
-    </section>
-    <section class="category-2">
-        <h1>Sport</h1>
-        <div class="carousel-best-movie-list">
-            <button class="slide-arrow slide-arrow-left" id="slide-arrow-prev-cat2-movie-list">&#8249;</button>
-            <button class="slide-arrow slide-arrow-right" id="slide-arrow-next-cat2-movie-list">&#8250;</button>
-            <ul class="slides-container" id="slides-container-cat2-movie-list">
-            </ul>
-        </div>
-    </section>
-    <section class="category-3">
-        <h1>Thriller</h1>
-        <div class="carousel-best-movie-list">
-            <button class="slide-arrow slide-arrow-left" id="slide-arrow-prev-cat3-movie-list">&#8249;</button>
-            <button class="slide-arrow slide-arrow-right" id="slide-arrow-next-cat3-movie-list">&#8250;</button>
-            <ul class="slides-container" id="slides-container-cat3-movie-list">
-            </ul>
-        </div>
-    </section>
+                <h1></h1>
+                <a href="#">Play</a>
+                <p></p>
+            </div>
+            <div class="img-container">
+                <img data-modal="modal-one" alt="">
+            </div>
+        </main>
+        <section class="best-movie-list">
+            <h1>Films les mieux notés</h1>
+            <div class="carousel-best-movie-list">
+                <button class="slide-arrow slide-arrow-left" id="slide-arrow-prev-best-movie-list">&#8249;</button>
+                <button class="slide-arrow slide-arrow-right" id="slide-arrow-next-best-movie-list">&#8250;</button>
+                <ul class="slides-container" id="slides-container-best-movie-list">
+                </ul>
+            </div>
+        </section>
+        <section class="category-1">
+            <h1>Science-fiction</h1>
+            <div class="carousel-best-movie-list">
+                <button class="slide-arrow slide-arrow-left" id="slide-arrow-prev-cat1-movie-list">&#8249;</button>
+                <button class="slide-arrow slide-arrow-right" id="slide-arrow-next-cat1-movie-list">&#8250;</button>
+                <ul class="slides-container" id="slides-container-cat1-movie-list">
+                </ul>
+            </div>
+        </section>
+        <section class="category-2">
+            <h1>Sport</h1>
+            <div class="carousel-best-movie-list">
+                <button class="slide-arrow slide-arrow-left" id="slide-arrow-prev-cat2-movie-list">&#8249;</button>
+                <button class="slide-arrow slide-arrow-right" id="slide-arrow-next-cat2-movie-list">&#8250;</button>
+                <ul class="slides-container" id="slides-container-cat2-movie-list">
+                </ul>
+            </div>
+        </section>
+        <section class="category-3">
+            <h1>Thriller</h1>
+            <div class="carousel-best-movie-list">
+                <button class="slide-arrow slide-arrow-left" id="slide-arrow-prev-cat3-movie-list">&#8249;</button>
+                <button class="slide-arrow slide-arrow-right" id="slide-arrow-next-cat3-movie-list">&#8250;</button>
+                <ul class="slides-container" id="slides-container-cat3-movie-list">
+                </ul>
+            </div>
+        </section>
 
-    <div class="modal" id="modal-one">
-        <div class="modal-bg modal-exit"></div>
-        <div class="modal-container">
-            <h1>Amazing Modal</h1>
-            <h2>Pure Vanilla JavaScript</h2>
-            <button class="modal-close modal-exit">X</button>
+        <div class="modal" id="modal-one">
+            <div class="modal-bg modal-exit"></div>
+            <div class="modal-container">
+                <h1>Amazing Modal</h1>
+                <h2>Pure Vanilla JavaScript</h2>
+                <button class="modal-close modal-exit">X</button>
+            </div>
         </div>
+
+
+        <script src="/app.bundle.js"></script>
     </div>
-    <script src="/polyfill.bundle.js"></script>
-    <script src="/app.bundle.js"></script>
-
-
-
+    <div class="middle">
+        <div class="bar bar1"></div>
+        <div class="bar bar2"></div>
+        <div class="bar bar3"></div>
+        <div class="bar bar4"></div>
+        <div class="bar bar5"></div>
+        <div class="bar bar6"></div>
+        <div class="bar bar7"></div>
+        <div class="bar bar8"></div>
+    </div>
 </body>
+
 
 </html>
