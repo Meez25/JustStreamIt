@@ -151,12 +151,12 @@ section {
     transform: scale(1.50);
 }
 
-#slide-arrow-prev-best-movie-list {
+.slide-arrow-left {
     left: 0;
     padding-left: 0.25rem;
 }
 
-#slide-arrow-next-best-movie-list {
+.slide-arrow-right {
     right: 0;
     padding-left: 0.75rem;
 }
@@ -164,7 +164,7 @@ section {
 .slide {
     display: flex;
     justify-content: center;
-    width: 100px;
+    width: 180px;
     height: 100%;
     flex: 1 0 25%;
 }

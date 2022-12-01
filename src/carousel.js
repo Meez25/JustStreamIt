@@ -1,7 +1,8 @@
-export default function carousel() {
-    const slidesContainer = document.getElementById("slides-container-best-movie-list");
-    const prevButton = document.getElementById("slide-arrow-prev-best-movie-list");
-    const nextButton = document.getElementById("slide-arrow-next-best-movie-list");
+export default function carousel(divCarouselClassName) {
+    const carousel = document.querySelector("." + divCarouselClassName);
+    const slidesContainer = carousel.getElementsByClassName("slides-container")[0];
+    const prevButton = carousel.getElementsByClassName("slide-arrow-left")[0];
+    const nextButton = carousel.getElementsByClassName("slide-arrow-right")[0];
 
     nextButton.addEventListener("click", () => {
         const slide = document.querySelector(".slide");
