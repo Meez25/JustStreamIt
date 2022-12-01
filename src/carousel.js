@@ -3,6 +3,8 @@ export default function carousel(divCarouselClassName) {
     const slidesContainer = carousel.getElementsByClassName("slides-container")[0];
     const prevButton = carousel.getElementsByClassName("slide-arrow-left")[0];
     const nextButton = carousel.getElementsByClassName("slide-arrow-right")[0];
+    // scrollLeft 0 to reset the scrolling position
+    slidesContainer.scrollLeft = 0;
 
     nextButton.addEventListener("click", () => {
         const slide = document.querySelector(".slide");
