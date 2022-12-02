@@ -2,7 +2,6 @@ import queryDetail from "./queryDetail";
 
 export default function getDataForModal() {
     const mapFilmDetail = new Map();
-    console.log("getDataForModal");
     const filmToQuery = document.querySelectorAll('[film-id]');
     filmToQuery.forEach(async function (film) {
         const filmID = film.getAttribute('film-id');
