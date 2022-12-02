@@ -6,4 +6,5 @@ export default function showBestMovie(bestMovieJson) {
     bestMovieDescription[0].textContent = bestMovieJson.description;
     const bestMovieImage = bestMovieDiv.getElementsByTagName("img");
     bestMovieImage[0].src = bestMovieJson.image_url;
+    bestMovieImage[0].setAttribute("film-id", bestMovieJson.id);
 }

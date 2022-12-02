@@ -4,14 +4,14 @@ import updateModal from "./updateModal.js";
 export default async function createModal() {
     const modals = document.querySelectorAll('[data-modal]');
     // getDataForModal runs asynchronously to get the data
-    const mapFilmDetail = getDataForModal();
+    const formattedMapFilmDetail = getDataForModal();
 
     modals.forEach(function (trigger) {
         trigger.addEventListener('click', function (event) {
             const filmID = trigger.getAttribute('film-id');
             try {
                 // Wait for the data to be loaded to update the modal
-                Promise.race([mapFilmDetail]).then((values) => {
+                Promise.race([formattedMapFilmDetail]).then((values) => {
                     updateModal(values, filmID);
                 })
             } catch (e) {
