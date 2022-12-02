@@ -22,6 +22,5 @@ Promise.all([finishedDisplayingBestReview, two, three, four]).then((values) => {
     loading.style.display = "none";
     body.style.display = "inline";
     createModal();
-    getDataForModal();
 });
 

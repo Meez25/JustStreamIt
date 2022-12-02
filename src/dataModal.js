@@ -1,6 +1,6 @@
 import queryDetail from "./queryDetail";
 
-export default function getDataForModal() {
+export default async function getDataForModal() {
     const mapFilmDetail = new Map();
     const filmToQuery = document.querySelectorAll('[film-id]');
     filmToQuery.forEach(async function (film) {
@@ -12,5 +12,13 @@ export default function getDataForModal() {
             console.log(e);
         }
     })
+    await timeout(10000);
+    console.log("Waited 10 seconds")
     return mapFilmDetail;
+}
+
+function timeout(ms) {
+    return new Promise(resolve => {
+        setTimeout(resolve, ms)
+    })
 }
