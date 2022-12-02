@@ -12,7 +12,7 @@ export default async function createModal() {
             try {
                 // Wait for the data to be loaded to update the modal
                 Promise.race([mapFilmDetail]).then((values) => {
-                    updateModal(values.get(filmID));
+                    updateModal(values, filmID);
                 })
             } catch (e) {
                 console.log(e);

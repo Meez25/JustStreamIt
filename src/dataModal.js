@@ -12,8 +12,8 @@ export default async function getDataForModal() {
             console.log(e);
         }
     })
-    await timeout(10000);
-    console.log("Waited 10 seconds")
+    await timeout(2000);
+    console.log("Waited 2 seconds")
     return mapFilmDetail;
 }
 

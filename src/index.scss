@@ -200,6 +200,8 @@ img {
     justify-content: center;
 
     &.open {
+        display: flex;
+        justify-content: center;
         visibility: visible;
         opacity: 1;
         transition-delay: 0s;
@@ -212,12 +214,15 @@ img {
     }
 
     &-container {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
         width: 600px;
-        height: 400px;
+        min-height: 300px;
         border-radius: 10px;
-        background: #fff;
         position: relative;
         padding: 30px;
+        color: black;
     }
 
     &-close {
@@ -232,6 +237,44 @@ img {
         font-weight: bold;
         cursor: pointer;
     }
+}
+
+.image-div {
+    position: absolute;
+    right: 20px;
+    top: 40px;
+    height: 268px;
+    width: 182px;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0px;
+}
+
+.left-side {
+    margin-right: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    text-align: center;
+}
+
+.subtitle {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0px;
+}
+
+.subtitle li {
+    display: inline;
 }
 
 

@@ -1,5 +1,32 @@
-export default function updateModal(mapFilmDetail) {
-    console.log(mapFilmDetail);
+export default function updateModal(mapFilmDetail, filmID) {
+    const modal = document.getElementsByClassName("modal-container")[0];
+    const img = document.getElementsByClassName("image")[0];
+    const title = modal.getElementsByClassName("title")[0];
+    const duration = modal.getElementsByClassName("duration")[0];
+    const category = modal.getElementsByClassName("category")[0];
+    const releaseDate = modal.getElementsByClassName("release-date")[0];
+    const country = modal.getElementsByClassName("country")[0];
+    const director = modal.getElementsByClassName("director")[0];
+    const actors = modal.getElementsByClassName("actors")[0];
+    const rank = modal.getElementsByClassName("rank")[0];
+    const imdb = modal.getElementsByClassName("imdb")[0];
+    const income = modal.getElementsByClassName("income")[0];
+    const summary = modal.getElementsByClassName("summary")[0];
+
+    const clickedMovie = mapFilmDetail.get(filmID);
+    console.log(clickedMovie);
+    title.innerHTML = clickedMovie.title;
+    img.src = clickedMovie.image_url;
+    duration.innerHTML = clickedMovie.duration;
+    category.innerHTML = clickedMovie.genres;
+    releaseDate.innerHTML = clickedMovie.year;
+    country.innerHTML = clickedMovie.countries;
+    director.innerHTML = clickedMovie.directors;
+    actors.innerHTML = clickedMovie.actors;
+    rank.innerHTML = clickedMovie.rated;
+    imdb.innerHTML = clickedMovie.imdb_score;
+    income.innerHTML = clickedMovie.worldwide_gross_income;
+    summary.innerHTML = clickedMovie.long_description;
 }
 
 /*
