@@ -2,7 +2,8 @@ import "./index.scss";
 import carousel from './carousel.js';
 import showBestReview from './showBestReview.js';
 import showCategory from './showCategory.js';
-import createModal from './modal.js';
+import createModal from './createModal.js';
+import getDataForModal from "./dataModal.js";
 
 const finishedDisplayingBestReview = showBestReview();
 const two = showCategory("slides-container-cat1-movie-list", "sci-fi");
@@ -21,4 +22,6 @@ Promise.all([finishedDisplayingBestReview, two, three, four]).then((values) => {
     loading.style.display = "none";
     body.style.display = "inline";
     createModal();
+    getDataForModal();
 });
+
