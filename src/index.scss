@@ -270,11 +270,17 @@ ul {
 .subtitle {
     display: flex;
     justify-content: space-evenly;
-    margin: 0px;
+    margin: 5px;
 }
 
 .subtitle li {
     display: inline;
+    margin: 5px;
+    font-weight: bold;
+}
+
+.informations li {
+    margin: 10px;
 }
 
 

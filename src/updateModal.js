@@ -16,7 +16,7 @@ export default function updateModal(mapFilmDetail, filmID) {
     console.log(mapFilmDetail);
     const clickedMovie = mapFilmDetail.get(filmID);
     console.log(clickedMovie);
-    title.innerHTML = clickedMovie.title;
+    title.innerHTML = clickedMovie.original_title;
     img.src = clickedMovie.image_url;
     duration.innerHTML = clickedMovie.duration;
     category.innerHTML = clickedMovie.genres;
