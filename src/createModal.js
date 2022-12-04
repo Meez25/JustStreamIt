@@ -13,6 +13,7 @@ export default async function createModal() {
                 // Wait for the data to be loaded to update the modal
                 Promise.race([formattedMapFilmDetail]).then((values) => {
                     updateModal(values, filmID);
+                    console.log("loading finished!")
                 })
             } catch (e) {
                 console.log(e);

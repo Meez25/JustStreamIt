@@ -3,7 +3,7 @@ import carousel from './carousel.js';
 import showBestReview from './showBestReview.js';
 import showCategory from './showCategory.js';
 import createModal from './createModal.js';
-import getDataForModal from "./dataModal.js";
+import resetCarouselScroll from './resetCarouselScroll.js';
 
 const finishedDisplayingBestReview = showBestReview();
 const two = showCategory("slides-container-cat1-movie-list", "sci-fi");
@@ -15,6 +15,8 @@ carousel("carousel-best-movie-list");
 carousel("category-1");
 carousel("category-2");
 carousel("category-3");
+
+resetCarouselScroll();
 
 Promise.all([finishedDisplayingBestReview, two, three, four]).then((values) => {
     const body = document.getElementsByClassName("body")[0];
