@@ -1,12 +1,12 @@
 export default function resetCarouselScroll() {
-    const body = document.body;
-    body.onload = function () {
-        console.log("Onload")
-        const carouselList = document.getElementsByClassName('slides-container');
-        console.log(carouselList)
-        for (let i = 0; i < carouselList.length; i++) {
-            console.log(carouselList[i].scrollLeft)
-            carouselList[i].scrollLeft = 0;
-        }
+    const carouselList = document.getElementsByClassName('slides-container');
+    for (let i = 0; i < carouselList.length; i++) {
+        console.log(carouselList[i]);
+        console.log(carouselList[i].scrollLeft)
+        // Reset the scroll and hide the left arrow
+        carouselList[i].style.scrollBehavior = "initial";
+        carouselList[i].scrollLeft = 0;
+        carouselList[i].style.scrollBehavior = "smooth";
+        carouselList[i].parentElement.getElementsByClassName("slide-arrow-left")[0].style.display = "none";
     }
 }

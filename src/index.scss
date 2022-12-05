@@ -107,6 +107,11 @@ section {
     align-items: center;
     justify-content: center;
     color: white;
+    margin-bottom: 50px;
+
+    h1 {
+        margin-bottom: 20px;
+    }
 }
 
 .carousel {
@@ -236,6 +241,22 @@ img {
         border: 0px;
         font-weight: bold;
         cursor: pointer;
+    }
+}
+
+.play-button {
+    background-color: white;
+    width: 100px;
+    border-radius: 15px;
+    height: 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 10px 0px 10px 0px;
+    color: black;
+    border: none;
+
+    &:hover {
+        background-color: grey;
     }
 }
 
