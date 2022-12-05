@@ -10,10 +10,12 @@ export default function carousel(divCarouselClassName) {
         const slide = document.querySelector(".slide");
         const slideWidth = slide.clientWidth;
         slidesContainer.scrollLeft += slideWidth;
-        console.log("ScrollLeft = " + slidesContainer.scrollLeft);
-        if (slidesContainer.scrollLeft == 0) {
+        if (slidesContainer.scrollLeft + slideWidth <= 0) {
             prevButton.style.display = "none";
-        } else {
+        } else if (slidesContainer.scrollLeft + slideWidth >= slidesContainer.scrollLeftMax) {
+            nextButton.style.display = "none";
+        }
+        else {
             prevButton.style.display = "block";
         }
     });
@@ -22,11 +24,12 @@ export default function carousel(divCarouselClassName) {
         const slide = document.querySelector(".slide");
         const slideWidth = slide.clientWidth;
         slidesContainer.scrollLeft -= slideWidth;
-        console.log("ScrollLeft = " + slidesContainer.scrollLeft);
-        console.log(slidesContainer)
-        if (slidesContainer.scrollLeft == slidesContainer.scrollLeftMax) {
+        if (slidesContainer.scrollLeft - slideWidth >= slidesContainer.scrollLeftMax) {
             nextButton.style.display = "none";
-        } else {
+        } else if (slidesContainer.scrollLeft - slideWidth <= 0) {
+            prevButton.style.display = "none";
+        }
+        else {
             nextButton.style.display = "block";
         }
     });

@@ -14,7 +14,6 @@ export default async function getDataForModal() {
     }
 
     // await timeout(2000);
-    console.log(formattedMapFilmDetail);
     return formattedMapFilmDetail;
 }
 
