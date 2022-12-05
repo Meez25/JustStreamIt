@@ -100,6 +100,11 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: 100%;
+
+    .img {
+        max-width: 100%;
+    }
 }
 
 section {
@@ -191,6 +196,7 @@ section {
 img {
     border-radius: 5%;
     cursor: pointer;
+    max-width: 100%;
 }
 
 .modal {
@@ -372,4 +378,36 @@ ul {
         transform: scaleY(0.1);
         background: transparent;
     }
+}
+
+@media screen and (max-width: 1300px) {
+    .slide {
+        width: 130px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .slide {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .slide {
+        width: 80px;
+    }
+
+    .img {
+        width: 50%;
+        height: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .slide {
+        width: 50px;
+    }
+
+
+
 }
