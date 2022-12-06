@@ -2,11 +2,11 @@ import getDataForModal from "./dataModal.js";
 import updateModal from "./updateModal.js";
 
 export default async function createModal() {
-    const modals = document.querySelectorAll('[data-modal]');
+    const images = document.querySelectorAll('[data-modal]');
     // getDataForModal runs asynchronously to get the data
     const formattedMapFilmDetail = getDataForModal();
 
-    modals.forEach(function (trigger) {
+    images.forEach(function (trigger) {
         trigger.addEventListener('click', function (event) {
             const filmID = trigger.getAttribute('film-id');
             try {

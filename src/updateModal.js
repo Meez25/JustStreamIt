@@ -13,9 +13,7 @@ export default function updateModal(mapFilmDetail, filmID) {
     const income = modal.getElementsByClassName("income")[0];
     const summary = modal.getElementsByClassName("summary")[0];
 
-    console.log(mapFilmDetail);
     const clickedMovie = mapFilmDetail.get(filmID);
-    console.log(clickedMovie);
     title.innerHTML = clickedMovie.original_title;
     img.src = clickedMovie.image_url;
     duration.innerHTML = clickedMovie.duration;
